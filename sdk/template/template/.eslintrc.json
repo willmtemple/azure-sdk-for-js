@@ -3,5 +3,8 @@
   "extends": ["../../.eslintrc.json", "plugin:@azure/azure-sdk/recommended"],
   "parserOptions": {
     "createDefaultProgram": true
+  },
+  "rules": {
+    "@azure/azure-sdk/ts-config-lib": "error"
   }
 }

@@ -59,7 +59,7 @@ export function browserConfig(test = false, production = false) {
   const baseConfig = {
     input: input,
     output: {
-      file: "browser/azure-template.js",
+      file: "browser/template.js",
       format: "umd",
       name: "ExampleClient",
       sourcemap: true,
@@ -99,7 +99,7 @@ export function browserConfig(test = false, production = false) {
     // applies to test code, which causes all tests to be removed by tree-shaking.
     baseConfig.treeshake = false;
   } else if (production) {
-    baseConfig.output.file = "browser/azure-template.min.js";
+    baseConfig.output.file = "browser/template.min.js";
     baseConfig.plugins.push(terser());
   }
 
