@@ -15,7 +15,7 @@ import { isNode } from "@azure/core-http";
 // exporting some value from a dependency
 export { URLBuilder } from "@azure/core-http";
 
-export function createEventEmitter() : EventEmitter {
+export function createEventEmitter(): EventEmitter {
   // use event emitter
   const e = new EventEmitter();
 

@@ -3,6 +3,6 @@
 
 /// <reference lib="dom"/>
 
-export default function(str: string) : void {
+export default function(str: string): void {
   document.write(str);
 }
