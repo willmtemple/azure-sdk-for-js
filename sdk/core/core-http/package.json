@@ -71,7 +71,7 @@
     "build:tsc": "tsc -p tsconfig.es.json",
     "build:types": "downlevel-dts types/latest/ types/3.1/",
     "build:rollup": "rollup -c 2>&1",
-    "build:test-browser": "rollup -c rollup.test.config.js 2>&1",
+    "build:test-browser": "rollup -c 2>&1",
     "check-format": "prettier --list-different --config ../../../.prettierrc.json --ignore-path ../../../.prettierignore \"src/**/*.ts\" \"test/**/*.ts\" \"*.{js,json}\"",
     "clean": "rimraf ./es ./dist ./dist-test ./dist-browser ./types ./types3.1 ./coverage ./temp ./*.tgz",
     "execute:samples": "echo skipped",
@@ -145,6 +145,7 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
+    "@azure/dev-tool": "^1.0.0",
     "@azure/eslint-plugin-azure-sdk": "^3.0.0",
     "@azure/logger-js": "^1.0.2",
     "@microsoft/api-extractor": "7.7.11",
