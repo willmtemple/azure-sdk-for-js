@@ -593,6 +593,11 @@
       "versionPolicyName": "client"
     },
     {
+      "packageName": "@azure/testing-tutorial",
+      "projectFolder": "sdk/api-learn/testing-tutorial",
+      "versionPolicyName": "client"
+    },
+    {
       "packageName": "@azure/digital-twins",
       "projectFolder": "sdk/digitaltwins/digital-twins",
       "versionPolicyName": "client"
