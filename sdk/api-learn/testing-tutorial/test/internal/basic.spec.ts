@@ -13,7 +13,7 @@ describe("basic internal unit tests", async function() {
   // `it` declares a unit test. The test passes if it does not throw
   // an `Error`
   it("basic assertion", () => {
-    assert.equal(1,1);
+    assert.equal(1, 1);
   });
 
   // Add the following test to the existing "describe" block
@@ -28,7 +28,7 @@ describe("basic internal unit tests", async function() {
 
     // unquoted strings should be quoted
     assert.equal(quoteETag("abc"), `"abc"`);
-    
+
     // strings with unmatched quotes should be quoted
     assert.equal(quoteETag(`'abc"`), `"'abc""`);
     assert.equal(quoteETag(`"abc'`), `""abc'"`);
@@ -36,6 +36,5 @@ describe("basic internal unit tests", async function() {
     assert.equal(quoteETag(`"abc`), `""abc"`);
     assert.equal(quoteETag(`abc"`), `"abc""`);
     assert.equal(quoteETag(`abc'`), `"abc'"`);
-
   });
 });

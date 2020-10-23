@@ -16,7 +16,7 @@ const replaceableVariables: Record<string, string> = {
   AZ_CONFIG_ENDPOINT: "https://myappconfig.azconfig.io",
   AZURE_TENANT_ID: "azure_tenant_id",
   AZURE_CLIENT_ID: "azure_client_id",
-  AZURE_CLIENT_SECRET: "azure_client_secret",
+  AZURE_CLIENT_SECRET: "azure_client_secret"
 };
 
 function getEnv(name: string): string {
@@ -52,7 +52,7 @@ function createConfigurationClient(): ConfigurationClient {
 // You want to give the test suite a descriptive name. Here, I add
 // [AAD] to indicate that the tests are authenticating with the
 // service using Azure Active Directory.
-describe("[AAD] ConfigurationClient functional tests", function () {
+describe("[AAD] ConfigurationClient functional tests", function() {
   // Declare the client and recorder instances.
   // We will set them using the beforeEach hook.
   let client: ConfigurationClient;
@@ -61,7 +61,7 @@ describe("[AAD] ConfigurationClient functional tests", function () {
   // NOTE: use of "function" and not ES6 arrow-style functions
   // with the beforeEach hook is IMPORTANT due to the use of `this`
   // in the function body.
-  beforeEach(function () {
+  beforeEach(function() {
     // The recorder has some convenience methods, and we need to store
     // a reference to it so that we can `stop()` the recorder later
     // in the `afterEach` hook.
@@ -80,20 +80,16 @@ describe("[AAD] ConfigurationClient functional tests", function () {
       // arbitrary replacements within recordings.
       customizationsOnRecordings: [
         (recording: any): any =>
-          recording.replace(
-            /"access_token":"[^"]*"/g,
-            `"access_token":"access_token"`
-          ),
-      ],
+          recording.replace(/"access_token":"[^"]*"/g, `"access_token":"access_token"`)
+      ]
     });
     // We'll be able to refer to the instantiated `client` in tests,
     // since we initialize it before each test
     client = createConfigurationClient();
-
   });
 
   // After each test, we need to stop the recording.
-  afterEach(function () {
+  afterEach(function() {
     recorder.stop();
   });
 
