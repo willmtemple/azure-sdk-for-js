@@ -97,8 +97,8 @@ describe("[AAD] ConfigurationClient functional tests", function() {
   });
 
   // After each test, we need to stop the recording.
-  afterEach(function() {
-    recorder.stop();
+  afterEach(async function() {
+    await recorder.stop();
   });
 
   it("predetermined setting has expected value", async () => {
